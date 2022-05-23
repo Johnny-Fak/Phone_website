@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <script src="../jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Shop buying</title>
+</head>
+<body>
+    
+    <!-- header -->
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <ul class="list">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+    
+            <a href="#" class="logo"><img src="img/samsung-logo-png-1305.png"></a>
+        </header>
+
+        <div class="wrapper">
+            <div class="content">
+                <h1>Samsung galaxy series</h1>
+                <h3>Key features: </h3>
+                <ul>
+                    <li>8gb ram</li>
+                    <li>Take a picture any time of the dad</li>
+                    <li>Can play any mobile game in existence at high-max setting</li>
+                    <li>Android 10 support for 4 years</li>
+                    <li>Amoled retina display </li>
+                </ul>
+
+                <span class="price" data-text="$2,999">$1,999/-</span>
+
+                <div class="buttons">
+                    <a href="#"><button>Buy now</button></a>
+                    <a href="#"><button>Add to cart</button></a>
+                </div>
+
+                <div class="icons">
+                    <a href="" class="fab fa-facebook-square"></a>
+                    <a href="" class="fab fa-twitter-square"></a>
+                    <a href="" class="fab fa-instagram-square"></a>
+                </div>
+
+            </div>
+
+            
+
+            <div class="image-container">
+                <div class="images">
+                    <img src="img/Samsung8.png"  class="active img-cont">
+                    <img src="img/Samsung10.png" class="img-cont">
+                    <img src="img/samsung.png" class="img-cont">
+                    <img src="img/phone1.jpg" class="img-cont">
+                </div>
+    
+                <div class="controls">
+                    <div id="left" class="fas fa-caret-square-left"></div>
+                    <div id="right" class="fas fa-caret-square-right"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <!-- <main>
+        <div class="content-left">
+            <h1>Digital</h1>
+            <h2>Marketing</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quam minima, repellendus corrupti necessitatibus consequatur voluptatum, veritatis, sed architecto iure quisquam. Odio laboriosam recusandae autem amet, voluptates porro modi nesciunt!</p>
+            <button class="cta">Learn More</button>
+        </div>
+        <div class="content-right">
+            <img src="img/course-1.png" class="hero-img">
+        </div>
+    </main> -->
+
+
+    <script>
+        $(document).ready(function(){
+            $('nav ul li a').click(function(){
+                $('nav ul li a').removeClass('active');
+                $(this).addClass('active');
+            })
+            $('#right').click(function(){
+                $('.image-container').find('.active').next().addClass('active')
+                $('.image-container').find('.active').prev().removeClass('active')
+            })
+            $('#left').click(function(){
+                $('.image-container').find('.active').prev().addClass('active')
+                $('.image-container').find('.active').next().removeClass('active')
+            })
+        })
+    </script>
+</body>
+</html>
